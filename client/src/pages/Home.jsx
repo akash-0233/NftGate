@@ -1,4 +1,4 @@
-
+import './Home.css';
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 function Home() {
@@ -15,9 +15,9 @@ function Home() {
                 body: JSON.stringify({ from: account })
             });
             const data = await res.json();
-            if(data.status === 200){
+            if (data.status === 200) {
                 navigateTo("/members");
-            }else{
+            } else {
                 window.alert("You currently do not hold any NFTs in Collection");
             }
         } catch (error) {
@@ -25,7 +25,16 @@ function Home() {
         }
     }
     return (
-        <button onClick={revealMsg}>Reveal</button>
+<div className="home-container">
+            <div className="hero-section">
+                <h1 className="hero-title">Unlock the <span className="highlight">Hidden</span> Treasures</h1>
+                <p className="hero-subtitle">Experience exclusive content with your NFT collection!</p>
+            </div>
+            <div className="button-container">
+                <button className="reveal-btn" onClick={revealMsg}>Unlock Now</button>
+            </div>
+        </div>
+
     )
 }
 

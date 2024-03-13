@@ -1,4 +1,4 @@
-import './App.css'
+
 import Home from './pages/Home';
 import Members from './pages/Members';
 import Wallet from './pages/Wallet'
