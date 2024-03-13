@@ -1,13 +1,16 @@
 const express = require('express');
 const { Web3 } = require("web3")
 const ABI = require("./ABI.json")
+const cors = require('cors');
 
 require('dotenv').config();
 
 const app = express();
 
+
 //To accept json request.
 app.use(express.json());
+app.use(cors());
 
 const Key = process.env.MNEMONIC;
 const Alchemy = process.env.PROJECT_ID;
@@ -24,18 +27,17 @@ const fetchNFTs = async (account) => {
 
     try {
         const nftBalance = await contract.methods.balanceOf(account).call();
-        console.log("Number of nft is :",Number(nftBalance));
         return {userNFTs:Number(nftBalance)};
     } catch (error) {
         console.error("Error while fetchin nft", error)
     }
 }
 
+
 app.post('/members',async(req,res)=>{
     try {
         const account = req.body.from;
         const numNFTs = await fetchNFTs(account)
-        console.log(numNFTs);
         if(numNFTs.userNFTs > 0){
             res.status(200).json({status: 200, numNFTs});
         }else{
