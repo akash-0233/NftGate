@@ -23,7 +23,7 @@ function Members() {
     if (socket) {
       socket.on('nftsUpdated', (data) => {
         if (data.userNFTs < 1) {
-          alert("You've been logged out because you no longer hold any NFTs in collection");
+          alert("You've been logged out because you no longer hold any NFTs in collection with address 0xef3C9...d59a0");
           setTimeout(() => {
             navigateTo("/");
           }, 300);

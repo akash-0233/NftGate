@@ -13,7 +13,7 @@ const data = {
   name: 'NFT Transfer',
   expression: 'KHR4X2xvZ3NfdG9waWMxID1+ICdkNEJkYTUyQzg0Qzc2ODc5RDUwQUE3Y0I1MzMzOEYxN0QxZDA2RDREJykgJiYgDQoodHhfbG9nc19hZGRyZXNzID09ICcweGVmM0M5YzJhOUIzRDE2MzAyZTNlNWNkQjA5QWI3OGQxZUUyZDU5YTAnKSAmJiANCih0eF9sb2dzX3RvcGljMCA9PSAnMHhkZGYyNTJhZDFiZTJjODliNjljMmIwNjhmYzM3OGRhYTk1MmJhN2YxNjNjNGExMTYyOGY1NWE0ZGY1MjNiM2VmJyk=',
   network: 'ethereum-sepolia',
-  destinationIds: ['2c2d6176-62e2-48c8-9a74-593853d04478']
+  destinationIds: ['b38e87dc-5636-420e-a04c-d3f18b35b45c']
 };
 
 axios.post('https://api.quicknode.com/quickalerts/rest/v1/notifications', data, { headers })

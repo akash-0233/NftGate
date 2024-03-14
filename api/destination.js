@@ -11,7 +11,7 @@ const headers = {
 
 const data = {
   name: 'My Destination',
-  to_url: 'https://ab81-2409-40c2-100e-8f63-748c-3085-e936-a8d7.ngrok-free.app/webhook',
+  to_url: 'https://cf0b-152-59-11-223.ngrok-free.app/webhook',
   webhook_type: 'POST',
   service: 'webhook',
   payload_type: 5

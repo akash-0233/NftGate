@@ -18,7 +18,7 @@ function Home() {
             if (data.status === 200) {
                 navigateTo("/members");
             } else {
-                window.alert("You currently do not hold any NFTs in Collection");
+                window.alert("You currently do not hold any NFTs in collection with address 0xef3C9...d59a0");
             }
         } catch (error) {
             console.error(error);
